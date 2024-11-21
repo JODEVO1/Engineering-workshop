@@ -1,0 +1,11 @@
+# Create a barplot using Seaborn
+fig, ax = plt.subplots()
+sns.barplot(x="Coefficient", y="Variable", data=coeff_data, ax=ax, palette="coolwarm")
+
+# Customize plot for better readability
+ax.set_title(f"Visualizing Coefficients for {machine}")
+ax.set_xlabel("Coefficient Value")
+ax.set_ylabel("Variable")
+
+# Display the chart in Streamlit
+st.pyplot(fig)
